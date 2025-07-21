@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-function ToDoItem(props) {
+function ToDoitem(props) {
+  /*const [isclicked, setisclicked] = useState(false);
+  function handelinputclick() {
+    setisclicked((prevValue) => {
+      return !prevValue;
+    });
+  }*/
+
   return (
-    <div
+    <li
       onClick={() => {
         props.onChecked(props.id);
       }}
+      style={{ textDecoration: isclicked ? "line-through" : "none" }}
     >
-      <li>{props.text}</li>
-    </div>
+      {props.value}
+    </li>
   );
 }
 
-export default ToDoItem;
+export default ToDoitem;
