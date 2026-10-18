@@ -11,7 +11,7 @@ function App() {
 
     setFullName(prevValue => {
       if (name === "fName") {
-        return {
+        return {                                      
           fName: value,
           lName: prevValue.lName
         };
